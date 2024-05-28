@@ -280,7 +280,7 @@ namespace ClashTheCube
                 }
             );
             
-            serializer.MetaSave(snapshot);
+            //serializer.MetaSave(snapshot);
             
             if (cubeMetaSavedEvent)
             {
@@ -311,10 +311,10 @@ namespace ClashTheCube
 
         private void RemoveSnapshot()
         {
-            serializer.MetaRemove(
-                DataBaseController.Cubes_Table,
-                identifier
-            );
+            // //serializer.MetaRemove(
+            //     DataBaseController.Cubes_Table,
+            //     identifier
+            // //);
         }
 
         #endregion

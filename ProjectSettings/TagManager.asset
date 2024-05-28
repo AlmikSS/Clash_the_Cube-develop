@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - Red Line
   - Bomb
+  - Plate
   layers:
   - Default
   - TransparentFX
