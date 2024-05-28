@@ -13,10 +13,12 @@ public class SplineController : MonoBehaviour
     {
         _controller.SwipeEnded += OnSwipeEnded;
         _controller.Swipe += OnSwipe;
+        _spline.GetComponent<MeshRenderer>().enabled = false;
     }
 
     private void OnSwipe(Vector3 delta)
     {
+        _spline.GetComponent<MeshRenderer>().enabled = true;
         SplinePoint firstPoint = _spline.GetPoint(2);
         firstPoint.position = new Vector3(delta.x * _power, 1, delta.y * _power);
         _spline.SetPoint(2, firstPoint);
@@ -28,6 +30,6 @@ public class SplineController : MonoBehaviour
 
     private void OnSwipeEnded()
     {
-        
+        _spline.GetComponent<MeshRenderer>().enabled = false;
     }
 }
